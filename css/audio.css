@@ -1,0 +1,51 @@
+/* CSS для блока управления */
+.audio-control {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 80;
+}
+
+.audio-control button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.audio-control button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 600px) {
+    .audio-control {
+        bottom: 25%;
+        right: 1%;
+        padding: 3px 6px;
+    }
+
+    .audio-control button img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .audio-control {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .audio-control button {
+        margin: 2px 5px;
+    }
+}
